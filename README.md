@@ -1,6 +1,6 @@
 # Interactive Wall Calendar Component
 
-A polished, interactive React + Vite calendar component inspired by a physical wall calendar. This project demonstrates a clean UI, smooth UX, and a fully responsive design with advanced features like day range selection, notes, and climate-based background imagery.
+A polished, interactive React calendar component inspired by a physical wall calendar. This project demonstrates a clean UI, smooth UX, and a fully responsive design with advanced features like day range selection, notes, and climate-based background imagery.
 
 [Deployed Link](https://cal-eight-khaki.vercel.app/)
 
@@ -29,20 +29,20 @@ src/
 │ │ ├─ HangingCalendar.tsx
 │ │ ├─ NotesPanel.tsx
 │ │ └─ WireBinding.tsx
-│ ├─ ui/ # Reusable UI components (button, input, alert, etc.)
+│ ├─ ui/
 │ └─ NavLink.tsx
 ├─ hooks/
 │ ├─ useCalendar.ts
 │ ├─ use-mobile.tsx
 │ └─ use-toast.ts
-├─ lib/ # Utilities & helper functions
+├─ lib/
 │ ├─ calendar-utils.ts
 │ ├─ month-images.ts
 │ └─ utils.ts
 ├─ pages/
 │ ├─ Index.tsx
 │ └─ NotFound.tsx
-├─ assets/ # Images and static assets
+├─ assets/
 ├─ App.tsx
 ├─ main.tsx
 └─ styles/
@@ -73,13 +73,25 @@ Works seamlessly on both desktop and mobile devices.
 ---
 
 ## Screenshots
-Calendar with date range selection
+**Desktop View** - Modern Design and Easy UX
 
+![Desktop View](screenshots/1.png)
 
-Notes panel integrated with the calendar
+**Responsive Mobile View**
 
+![Mobile View](screenshots/2.png)
 
-Responsive mobile view
+**Date Range Selector** - Selecting range of date and also specific notes for that range
+
+![Date Range Selector](screenshots/4.png)
+
+**Integrated Notes Section** - Can also delete and manage notes for each months separately
+
+![Notes Section](screenshots/5.png)
+
+**Dynamic Background Images according to Season & Holidays Mentioned**
+
+![Holidays](screenshots/3.png)
 
 ---
 
