@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Playfair Display", "Georgia", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        calendar: {
+          paper: "hsl(var(--calendar-paper))",
+          wire: "hsl(var(--calendar-wire))",
+          hole: "hsl(var(--calendar-hole))",
+          range: "hsl(var(--range-bg))",
+          start: "hsl(var(--range-start))",
+          end: "hsl(var(--range-end))",
+          today: "hsl(var(--today-ring))",
+          weekend: "hsl(var(--weekend))",
+          note: "hsl(var(--note-bg))",
+          "note-line": "hsl(var(--note-line))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +81,33 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "page-flip": {
+          "0%": { transform: "rotateX(0deg)", opacity: "1" },
+          "50%": { transform: "rotateX(-90deg)", opacity: "0.5" },
+          "100%": { transform: "rotateX(0deg)", opacity: "1" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "swing": {
+          "0%, 100%": { transform: "rotate(-1deg)" },
+          "50%": { transform: "rotate(1deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "page-flip": "page-flip 0.6s ease-in-out",
+        "fade-in": "fade-in 0.4s ease-out",
+        "swing": "swing 4s ease-in-out infinite",
       },
     },
   },
