@@ -56,16 +56,26 @@ export default function HangingCalendar() {
         }}
         className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-10 sm:mt-14"
       >
+        {/* Stacked pages behind calendar for realism */}
+        <div
+          className="absolute inset-x-1 inset-y-1 rounded-xl bg-muted border border-border"
+          style={{ transform: "translateZ(-6px) translateY(6px)", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
+        />
+        <div
+          className="absolute inset-x-0.5 inset-y-0.5 rounded-xl bg-muted/80 border border-border/60"
+          style={{ transform: "translateZ(-3px) translateY(3px)", boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}
+        />
+
         {/* Calendar shadow on wall */}
         <div className="absolute -inset-4 sm:-inset-6 rounded-2xl bg-foreground/[0.06] blur-2xl -z-10 translate-y-4" />
         <div className="absolute -inset-2 sm:-inset-3 rounded-xl bg-foreground/[0.03] blur-lg -z-10 translate-y-2" />
 
         {/* Main calendar body */}
-        <div className="rounded-xl overflow-hidden calendar-shadow bg-calendar-paper">
+        <div className="rounded-xl overflow-hidden calendar-shadow bg-calendar-paper relative z-10">
           {/* Image panel */}
           <CalendarImage month={month} year={year} isFlipping={isFlipping} />
 
-          {/* Wire binding */}
+          {/* Wire/spiral binding */}
           <WireBinding />
 
           {/* Grid + Notes in responsive layout */}
@@ -93,7 +103,7 @@ export default function HangingCalendar() {
         </div>
 
         {/* Paper edge effect */}
-        <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-b from-transparent to-foreground/5 rounded-b-xl" />
+        <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-b from-transparent to-foreground/5 rounded-b-xl z-10" />
       </motion.div>
     </div>
   );

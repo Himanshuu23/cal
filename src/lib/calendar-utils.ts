@@ -83,12 +83,24 @@ export function formatDate(date: Date): string {
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
-// US holidays (static)
+// US holidays (expanded for all months)
 export const HOLIDAYS: Record<string, string> = {
   "0-1": "New Year's Day",
+  "0-20": "Martin Luther King Jr. Day",
   "1-14": "Valentine's Day",
+  "1-17": "Presidents' Day",
+  "2-17": "St. Patrick's Day",
+  "3-1": "April Fools' Day",
+  "4-5": "Cinco de Mayo",
+  "4-26": "Memorial Day",
+  "5-19": "Juneteenth",
   "6-4": "Independence Day",
+  "8-1": "Labor Day",
+  "9-14": "Columbus Day",
   "9-31": "Halloween",
+  "10-11": "Veterans Day",
+  "10-27": "Thanksgiving",
+  "11-24": "Christmas Eve",
   "11-25": "Christmas",
   "11-31": "New Year's Eve",
 };
