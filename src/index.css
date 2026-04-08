@@ -141,4 +141,19 @@
     );
     background-position: 0 8px;
   }
+
+  /* Prevent scrollbar flash */
+  .scrollbar-stable {
+    scrollbar-gutter: stable;
+  }
+  .scrollbar-stable::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-stable::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-stable::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
 }

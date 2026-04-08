@@ -32,19 +32,24 @@ const CalendarImage = memo(function CalendarImage({ month, year, isFlipping }: C
             width={1024}
             height={768}
           />
-          {/* Month overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+          {/* Darker overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
           <div className="absolute bottom-4 right-6 text-right">
-            <p className="text-primary-foreground/80 text-sm font-sans font-medium tracking-widest uppercase">
+            <p className="text-white/90 text-sm font-sans font-medium tracking-widest uppercase drop-shadow-lg">
               {year}
             </p>
-            <h2 className="text-primary-foreground text-3xl sm:text-4xl font-display font-bold">
+            <h2 className="text-white text-3xl sm:text-4xl font-display font-bold drop-shadow-lg"
+              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
+            >
               {MONTH_NAMES[month]}
             </h2>
           </div>
-          {/* Month number */}
+          {/* Month number - more visible */}
           <div className="absolute top-4 right-6">
-            <span className="text-primary-foreground/40 text-6xl sm:text-7xl font-display font-bold">
+            <span
+              className="text-white/70 text-6xl sm:text-7xl font-display font-bold"
+              style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+            >
               {String(month + 1).padStart(2, "0")}
             </span>
           </div>
