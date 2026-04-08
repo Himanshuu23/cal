@@ -32,7 +32,7 @@ const CalendarImage = memo(function CalendarImage({ month, year, isFlipping }: C
             width={1024}
             height={768}
           />
-          {/* Darker overlay for text readability */}
+
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
           <div className="absolute bottom-4 right-6 text-right">
             <p className="text-white/90 text-sm font-sans font-medium tracking-widest uppercase drop-shadow-lg">
@@ -44,7 +44,7 @@ const CalendarImage = memo(function CalendarImage({ month, year, isFlipping }: C
               {MONTH_NAMES[month]}
             </h2>
           </div>
-          {/* Month number - more visible */}
+          
           <div className="absolute top-4 right-6">
             <span
               className="text-white/70 text-6xl sm:text-7xl font-display font-bold"

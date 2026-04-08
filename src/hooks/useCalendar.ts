@@ -8,7 +8,7 @@ export interface DateRange {
 export interface NoteEntry {
   id: string;
   text: string;
-  date: string; // ISO key "YYYY-MM-DD"
+  date: string;
   createdAt: number;
 }
 

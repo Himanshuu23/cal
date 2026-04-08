@@ -45,7 +45,6 @@ const DayCell = memo(function DayCell({ day, range, onClick, index }: DayCellPro
         isStart && isEnd && "rounded-lg",
       )}
     >
-      {/* Holiday indicator dot */}
       {holiday && isCurrentMonth && (
         <span className="absolute top-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-destructive" />
       )}

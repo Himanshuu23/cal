@@ -5,7 +5,7 @@ const WireBinding = memo(function WireBinding() {
 
   return (
     <div className="relative w-full h-10 flex items-center justify-center z-10 bg-gradient-to-b from-muted/40 to-transparent">
-      {/* Spiral wire */}
+      
       <div className="flex justify-between px-4 sm:px-6 w-full items-center">
         {coils.map((i) => (
           <div
@@ -13,7 +13,7 @@ const WireBinding = memo(function WireBinding() {
             className="relative"
             style={{ width: "12px", height: "28px" }}
           >
-            {/* The spiral coil */}
+            
             <div
               className="absolute inset-0 rounded-full border-[1.5px]"
               style={{
@@ -22,7 +22,7 @@ const WireBinding = memo(function WireBinding() {
                 boxShadow: "0 2px 3px rgba(0,0,0,0.12), inset 0 1px 1px rgba(255,255,255,0.3)",
               }}
             />
-            {/* Wire going through */}
+
             <div
               className="absolute left-1/2 -translate-x-1/2 -top-1 w-[1.5px] h-[30px]"
               style={{
@@ -32,7 +32,7 @@ const WireBinding = memo(function WireBinding() {
           </div>
         ))}
       </div>
-      {/* Shadow below binding */}
+      
       <div className="absolute bottom-0 inset-x-0 h-2 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
     </div>
   );

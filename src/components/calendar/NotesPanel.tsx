@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Trash2, StickyNote } from "lucide-react";
 import type { DateRange, NoteEntry } from "@/hooks/useCalendar";
 import { formatDate, isSameDay } from "@/lib/calendar-utils";
-import { cn } from "@/lib/utils";
 
 interface NotesPanelProps {
   range: DateRange;
@@ -40,7 +39,7 @@ const NotesPanel = memo(function NotesPanel({
 
   return (
     <div className="bg-background rounded-lg p-4 sm:p-5 min-h-[200px] max-h-[350px] flex flex-col border border-border overflow-hidden">
-      {/* Header */}
+      
       <div className="flex items-center justify-between mb-3 pb-2 border-b border-border">
         <div className="flex items-center gap-2">
           <StickyNote className="w-4 h-4 text-muted-foreground" />
@@ -56,7 +55,7 @@ const NotesPanel = memo(function NotesPanel({
         )}
       </div>
 
-      {/* Range info */}
+      
       {range.start && (
         <motion.div
           initial={{ opacity: 0, y: -5 }}
@@ -73,7 +72,7 @@ const NotesPanel = memo(function NotesPanel({
         </motion.div>
       )}
 
-      {/* Add note form */}
+      
       <form onSubmit={handleSubmit} className="flex gap-2 mb-3 flex-shrink-0">
         <input
           type="text"
@@ -91,7 +90,7 @@ const NotesPanel = memo(function NotesPanel({
         </button>
       </form>
 
-      {/* Notes list */}
+
       <div className="flex-1 overflow-y-auto space-y-1.5 scrollbar-stable">
         <AnimatePresence initial={false}>
           {relevantNotes.length === 0 ? (

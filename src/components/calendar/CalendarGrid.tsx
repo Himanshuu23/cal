@@ -1,6 +1,5 @@
 import { memo, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { DAY_NAMES, generateCalendarGrid } from "@/lib/calendar-utils";
 import type { DateRange } from "@/hooks/useCalendar";
 import DayCell from "./DayCell";
@@ -21,7 +20,6 @@ const CalendarGrid = memo(function CalendarGrid({
 
   return (
     <div className="p-4 sm:p-6 calendar-paper">
-      {/* Navigation */}
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={onPrev}
@@ -39,7 +37,6 @@ const CalendarGrid = memo(function CalendarGrid({
         </button>
       </div>
 
-      {/* Day headers */}
       <div className="grid grid-cols-7 mb-2">
         {DAY_NAMES.map((day) => (
           <div
@@ -51,7 +48,6 @@ const CalendarGrid = memo(function CalendarGrid({
         ))}
       </div>
 
-      {/* Day grid */}
       <div className="grid grid-cols-7 gap-0.5">
         {days.map((day, i) => (
           <DayCell

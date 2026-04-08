@@ -40,7 +40,6 @@ export default function HangingCalendar() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Hanging nail */}
       <div className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 z-20">
         <div className="w-3 h-3 rounded-full bg-calendar-wire shadow-md" />
         <div className="w-0.5 h-6 sm:h-8 bg-calendar-wire/60 mx-auto" />
@@ -56,7 +55,7 @@ export default function HangingCalendar() {
         }}
         className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-10 sm:mt-2"
       >
-        {/* Stacked pages behind calendar for realism */}
+    
         <div
           className="absolute inset-x-1 inset-y-1 rounded-xl bg-muted border border-border"
           style={{ transform: "translateZ(-6px) translateY(6px)", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
@@ -66,19 +65,18 @@ export default function HangingCalendar() {
           style={{ transform: "translateZ(-3px) translateY(3px)", boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}
         />
 
-        {/* Calendar shadow on wall */}
+        
         <div className="absolute -inset-4 sm:-inset-6 rounded-2xl bg-foreground/[0.06] blur-2xl -z-10 translate-y-4" />
         <div className="absolute -inset-2 sm:-inset-3 rounded-xl bg-foreground/[0.03] blur-lg -z-10 translate-y-2" />
 
-        {/* Main calendar body */}
+      
         <div className="rounded-xl overflow-hidden calendar-shadow bg-calendar-paper relative z-10">
-          {/* Image panel */}
+
           <CalendarImage month={month} year={year} isFlipping={isFlipping} />
 
-          {/* Wire/spiral binding */}
+          
           <WireBinding />
 
-          {/* Grid + Notes in responsive layout */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] divide-y lg:divide-y-0 lg:divide-x divide-border">
             <CalendarGrid
               year={year}
@@ -102,7 +100,7 @@ export default function HangingCalendar() {
           </div>
         </div>
 
-        {/* Paper edge effect */}
+
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-b from-transparent to-foreground/5 rounded-b-xl z-10" />
       </motion.div>
     </div>

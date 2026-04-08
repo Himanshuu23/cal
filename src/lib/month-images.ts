@@ -3,20 +3,19 @@ import april from "@/assets/months/april.jpg";
 import july from "@/assets/months/july.jpg";
 import october from "@/assets/months/october.jpg";
 
-// Map months to seasonal images (4 images rotate through seasons)
 const MONTH_IMAGES: Record<number, string> = {
-  0: january,   // Jan - winter
-  1: january,   // Feb - winter
-  2: april,     // Mar - spring
-  3: april,     // Apr - spring
-  4: april,     // May - spring
-  5: july,      // Jun - summer
-  6: july,      // Jul - summer
-  7: july,      // Aug - summer
-  8: october,   // Sep - autumn
-  9: october,   // Oct - autumn
-  10: october,  // Nov - autumn
-  11: january,  // Dec - winter
+  0: january,   
+  1: january,  
+  2: april,     
+  3: april,     
+  4: april,     
+  5: july,      
+  6: july,      
+  7: july,
+  8: october,
+  9: october,   
+  10: october,  
+  11: january,
 };
 
 export function getMonthImage(month: number): string {

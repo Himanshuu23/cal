@@ -27,7 +27,6 @@ export function generateCalendarGrid(year: number, month: number): CalendarDay[]
   const daysInPrevMonth = getDaysInMonth(year, month - 1);
   const today = new Date();
 
-  // Previous month days
   for (let i = firstDay - 1; i >= 0; i--) {
     const date = new Date(year, month - 1, daysInPrevMonth - i);
     days.push({
@@ -38,7 +37,6 @@ export function generateCalendarGrid(year: number, month: number): CalendarDay[]
     });
   }
 
-  // Current month days
   for (let d = 1; d <= daysInMonth; d++) {
     const date = new Date(year, month, d);
     days.push({
@@ -52,7 +50,6 @@ export function generateCalendarGrid(year: number, month: number): CalendarDay[]
     });
   }
 
-  // Next month days to fill grid
   const remaining = 42 - days.length;
   for (let d = 1; d <= remaining; d++) {
     const date = new Date(year, month + 1, d);
@@ -83,7 +80,6 @@ export function formatDate(date: Date): string {
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
-// US holidays (expanded for all months)
 export const HOLIDAYS: Record<string, string> = {
   "0-1": "New Year's Day",
   "0-20": "Martin Luther King Jr. Day",
