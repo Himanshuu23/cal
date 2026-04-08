@@ -54,7 +54,7 @@ export default function HangingCalendar() {
           perspective: 1200,
           transformStyle: "preserve-3d",
         }}
-        className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-10 sm:mt-14"
+        className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-10 sm:mt-2"
       >
         {/* Stacked pages behind calendar for realism */}
         <div
