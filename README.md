@@ -4,6 +4,10 @@ A polished, interactive React calendar component inspired by a physical wall cal
 
 [Deployed Link](https://cal-eight-khaki.vercel.app/)
 
+**TUF favicon**
+
+![Favicon](public/favicon.ico)
+
 ---
 
 ## Features
